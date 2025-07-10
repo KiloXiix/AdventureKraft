@@ -6,8 +6,14 @@
   "item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
   "item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",
   "item.dangerzone.coarse_amethyst_boots": "Coarse Amethyst Boots",
-  "itemGroup.adventurekraftaitemstab": "§fAdventureKraft Items§f",
-  "itemGroup.adventurekraftbarmorytab": "§fAdventureKraft Armory§f"
+  "itemGroup.adventurekraftablockstab": "§fAdventureKraft Blocks§f",
+  "itemGroup.adventurekraftbporestab": "§fAdventureKraft Petrified Ores§f",
+  "itemGroup.adventurekraftcfoodtab": "§fAdventureKraft Food§f",
+  "itemGroup.adventurekraftditemstab": "§fAdventureKraft Items§f",
+  "itemGroup.adventurekraftearmorytab": "§fAdventureKraft Armory§f",
+  "itemGroup.adventurekraftftoolstab": "§fAdventureKraft Tools§f",
+  "itemGroup.adventurekraftgweaponstab": "§fAdventureKraft Weapons§f",
+  "itemGroup.adventurekrafthwiptab": "§fAdventureKraft WIP§f"
 }
 
 
