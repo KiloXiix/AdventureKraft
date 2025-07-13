@@ -1,15 +1,9 @@
-// === Base Item Class for Sword Items to be used for reference later ===
-
 package com.devmaster.dangerzone.items;
 
-import com.devmaster.dangerzone.misc.DangerZone;
 import com.devmaster.dangerzone.util.ModdedTier;
-
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableMultimap.Builder;
 import com.google.common.collect.Multimap;
-
-import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -23,7 +17,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.common.ForgeMod;
 
 import java.util.HashMap;
@@ -31,52 +24,84 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-public class Sword extends SwordItem
-{
+public abstract class Sword extends SwordItem {
     public int durabilityMultiplier;
     protected static final UUID MOVESPEED = UUID.fromString("35f5b798-7778-4017-98f9-ff557dc28f03");
     protected static final UUID REACH = UUID.fromString("168fad76-3979-4638-91c9-a366c0933551");
     protected String name;
     private String[] info = new String[0];
     protected float reach = 0, movespeed = 0, attackspeed = 0;
-    protected Multimap<Attribute, AttributeModifier> modifiers;
+    protected volatile Multimap<Attribute, AttributeModifier> modifiers;
     protected ItemStack repairitem;
     protected Map<Enchantment, Integer> defaultEnchantments = new HashMap<>();
-    // NBT keys to track if the item has received enchantments
+    protected ModdedTier moddedTier;
+    protected Properties properties;
+
     private static final String HAS_ENCHANTS_TAG = "hasEnchants";
 
-    public Sword(ModdedTier tier, int durabilityMultiplier)
-    {
-        super(tier, -1, -2.4f, new Properties());
-        this.repairitem = tier.getRepairIngredient().getItems()[0];
-        this.durabilityMultiplier = durabilityMultiplier;  // Set multiplier when registering
+    public Sword(ModdedTier tier, int durabilityMultiplier) {
+        super(tier, -1, -2.4F, new Properties().durability(tier.getUses() * durabilityMultiplier));
+        this.moddedTier = tier;
+        this.properties = new Properties().durability(tier.getUses() * durabilityMultiplier);
+        this.repairitem = tier.getRepairIngredient().getItems().length > 0
+                ? tier.getRepairIngredient().getItems()[0]
+                : ItemStack.EMPTY;
+        this.durabilityMultiplier = durabilityMultiplier;
     }
 
-    public Sword build(float reach, float movespeed)
-    {
+    public Sword(Properties properties) {
+        super(createTempTier(), -1, -2.4F, properties);
+        this.properties = properties;
+        this.moddedTier = createTempTier();
+    }
+
+    protected static ModdedTier createTempTier() {
+        return new ModdedTier(1, 0, 0, 0).withEmptyRepair();
+    }
+
+
+    protected abstract ConfigValues getConfigValues();
+
+    // Helper class to hold config values
+    protected static class ConfigValues {
+        public final int durability;
+        public final float damage;
+        public final float efficiency;
+        public final float attackSpeed;
+        public final int harvestLevel;
+        public final int enchantability;
+        public final int hitCost;
+
+        public ConfigValues(int durability, float damage, float efficiency, float attackSpeed,
+                            int harvestLevel, int enchantability, int hitCost) {
+            this.durability = durability;
+            this.damage = damage;
+            this.efficiency = efficiency;
+            this.attackSpeed = attackSpeed;
+            this.harvestLevel = harvestLevel;
+            this.enchantability = enchantability;
+            this.hitCost = hitCost;
+        }
+    }
+
+    @Override
+    public int getMaxDamage(ItemStack stack) {
+        return getConfigValues().durability;
+    }
+
+    @Override
+    public int getEnchantmentValue() {
+        return getConfigValues().enchantability;
+    }
+
+    public Sword build(float reach, float movespeed) {
         this.reach = reach;
         this.movespeed = movespeed;
-        Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Sword modifier", (double) getDamage(), AttributeModifier.Operation.ADDITION));
-        builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Sword modifier", (double) (-2.4f), AttributeModifier.Operation.ADDITION));
-        modifiers = builder.build();
         return this;
     }
 
-    public Sword rebuild()
-    {
-        Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        builder.putAll(modifiers);
-        if (movespeed != 0)
-        {
-            builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(MOVESPEED, "Sword modifier", (double) movespeed, AttributeModifier.Operation.MULTIPLY_TOTAL));
-        }
-        if (reach != 0)
-        {
-            builder.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(REACH, "Sword modifier", (double) reach, AttributeModifier.Operation.MULTIPLY_TOTAL));
-        }
-        modifiers = builder.build();
-
+    public Sword rebuild() {
+        this.modifiers = null;
         return this;
     }
 
@@ -124,12 +149,8 @@ public class Sword extends SwordItem
         stack.getOrCreateTag().putBoolean(HAS_ENCHANTS_TAG, true);
     }
 
-    public Sword rebuildWith(Attribute attribute, UUID id, String modifiername, double value, AttributeModifier.Operation valuetype)
-    {
-        Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        builder.putAll(modifiers);
-        builder.put(attribute, new AttributeModifier(id, modifiername, value, valuetype));
-        modifiers = builder.build();
+    public Sword rebuildWith(Attribute attribute, UUID id, String modifiername, double value, AttributeModifier.Operation valuetype) {
+        this.modifiers = null;
         return this;
     }
 
@@ -144,17 +165,49 @@ public class Sword extends SwordItem
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag){
+    public void appendHoverText(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
         for (String s : info) {
             tooltip.add(Component.literal(s));
         }
     }
 
     @Override
-    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot)
-    {
-        if (slot == EquipmentSlot.MAINHAND)
-        {
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot slot) {
+        if (slot == EquipmentSlot.MAINHAND) {
+            if (modifiers == null) {
+                synchronized (this) {
+                    if (modifiers == null) {
+                        ConfigValues config = getConfigValues();
+                        Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+
+                        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(
+                                BASE_ATTACK_DAMAGE_UUID,
+                                "Sword modifier",
+                                config.damage - 1.0F,
+                                AttributeModifier.Operation.ADDITION));
+
+                        builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(
+                                BASE_ATTACK_SPEED_UUID,
+                                "Sword modifier",
+                                -2.4F + config.attackSpeed,
+                                AttributeModifier.Operation.ADDITION));
+
+                        if (movespeed != 0) {
+                            builder.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(
+                                    MOVESPEED, "Sword modifier", (double) movespeed,
+                                    AttributeModifier.Operation.MULTIPLY_TOTAL));
+                        }
+
+                        if (reach != 0) {
+                            builder.put(ForgeMod.ENTITY_REACH.get(), new AttributeModifier(
+                                    REACH, "Sword modifier", (double) reach,
+                                    AttributeModifier.Operation.MULTIPLY_TOTAL));
+                        }
+
+                        modifiers = builder.build();
+                    }
+                }
+            }
             return modifiers;
         }
         return super.getDefaultAttributeModifiers(slot);

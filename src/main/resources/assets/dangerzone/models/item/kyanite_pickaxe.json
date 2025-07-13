@@ -1,7 +1,7 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "dangerzone:item/weapon/mantis_claw"
+    "layer0": "dangerzone:item/tool/kyanite_pickaxe"
   }
 }
 

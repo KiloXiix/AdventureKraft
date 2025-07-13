@@ -6,7 +6,10 @@ import com.devmaster.dangerzone.world.gen.ArmoredMobSpawnEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+
 
 @Mod(DangerZone.MOD_ID)
 public class DangerZone {
@@ -23,7 +26,14 @@ public class DangerZone {
         // Initialize and register all items and blocks
         RegistryHandler.init(modEventBus);
 
-        // Register game event handlers to the Forge event bus
+        // Hook into the common setup phase
+        modEventBus.addListener(this::onCommonSetup);
+
+        // Register event handlers
         MinecraftForge.EVENT_BUS.register(ArmoredMobSpawnEvents.class);
+    }
+
+    private void onCommonSetup(FMLCommonSetupEvent event) {
+        // Common Setup Code can go here
     }
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dangerzone:item/material/water_dragon_scale"
+  }
+}
+

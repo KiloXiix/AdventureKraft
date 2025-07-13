@@ -82,7 +82,7 @@ public class CoarseAmethystArmor {
         return new Armour(
                 () -> createArmorTier(ArmorItem.Type.HELMET),
                 ArmorItem.Type.HELMET,
-                new Item.Properties().rarity(Rarity.COMMON),  // Changed this line
+                new Item.Properties().rarity(Rarity.COMMON),
                 () -> getHitCostForType(ArmorItem.Type.HELMET),
                 "\u00A75Glittering\u00A75"
         );
@@ -92,7 +92,7 @@ public class CoarseAmethystArmor {
         return new Armour(
                 () -> createArmorTier(ArmorItem.Type.CHESTPLATE),
                 ArmorItem.Type.CHESTPLATE,
-                new Item.Properties().rarity(Rarity.COMMON),  // Changed
+                new Item.Properties().rarity(Rarity.COMMON),
                 () -> getHitCostForType(ArmorItem.Type.CHESTPLATE),
                 "\u00A75DAZZLING\u00A75"
         );
@@ -102,7 +102,7 @@ public class CoarseAmethystArmor {
         return new Armour(
                 () -> createArmorTier(ArmorItem.Type.LEGGINGS),
                 ArmorItem.Type.LEGGINGS,
-                new Item.Properties().rarity(Rarity.COMMON),  // Changed
+                new Item.Properties().rarity(Rarity.COMMON),
                 () -> getHitCostForType(ArmorItem.Type.LEGGINGS),
                 "\u00A75Shining\u00A75"
         );
@@ -112,7 +112,7 @@ public class CoarseAmethystArmor {
         return new Armour(
                 () -> createArmorTier(ArmorItem.Type.BOOTS),
                 ArmorItem.Type.BOOTS,
-                new Item.Properties().rarity(Rarity.COMMON),  // Changed
+                new Item.Properties().rarity(Rarity.COMMON),
                 () -> getHitCostForType(ArmorItem.Type.BOOTS),
                 "\u00A75Sparkling\u00A75"
         );

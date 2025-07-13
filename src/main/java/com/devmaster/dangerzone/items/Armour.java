@@ -62,7 +62,7 @@ public class Armour extends ArmorItem {
 
     private ArmorMaterial getRealMaterial() {
         if (cachedMaterial == null) {
-            synchronized (this) { // Thread-safe lazy initialization
+            synchronized (this) {
                 if (cachedMaterial == null) {
                     cachedMaterial = materialSupplier.get(); // Load the real material
                 }

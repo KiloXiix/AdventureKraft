@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dangerzone:item/bioraptor_scale"
+    "layer0": "dangerzone:item/material/bioraptor_scale"
   }
 }
 

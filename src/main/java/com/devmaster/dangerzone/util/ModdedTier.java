@@ -1,6 +1,3 @@
-// === DIRECT PORT OF ModdedTier FROM 1.16.5 Chaos-Update ===
-
-
 package com.devmaster.dangerzone.util;
 
 import net.minecraft.tags.TagKey;
@@ -14,7 +11,8 @@ public class ModdedTier implements Tier {
     private int uses = 0, enchantability = 0, level = 2;
     private float efficiency = 0, swingspeed = 1, damage = 0;
     private ItemStack repairitem;
-    private TagKey<Block> incorrectBlocksForDrops;
+    private TagKey<Block> correctBlocksForDrops;
+    private Ingredient repairIngredient = Ingredient.EMPTY;
 
     public ModdedTier(int uses, float damage, float efficiency, float swingspeed) {
         this.uses = uses;
@@ -39,9 +37,11 @@ public class ModdedTier implements Tier {
     }
 
     public ModdedTier incorrectBlocksForDrops(TagKey<Block> tag) {
-        this.incorrectBlocksForDrops = tag;
+        this.correctBlocksForDrops = tag;
         return this;
     }
+
+
 
     public ItemStack getRepairItem() {
         return repairitem;
@@ -57,13 +57,13 @@ public class ModdedTier implements Tier {
         return uses;
     }
 
-    // Modified method to set attack speed
+
     public ModdedTier speed(float f) {
         this.swingspeed = f;
         return this;
     }
 
-    // New getter method for attack speed
+
     public float getAttackSpeed() {
         return swingspeed;
     }
@@ -83,12 +83,24 @@ public class ModdedTier implements Tier {
         return enchantability;
     }
 
-    @Override
-    public Ingredient getRepairIngredient() {
-        return repairitem != null ? Ingredient.of(repairitem) : Ingredient.EMPTY;
+    public ModdedTier withEmptyRepair() {
+        this.repairIngredient = Ingredient.EMPTY;
+        return this;
     }
 
-    public TagKey<Block> getIncorrectBlocksForDrops() {
-        return incorrectBlocksForDrops;
+    @Override
+    public Ingredient getRepairIngredient() {
+        return repairIngredient;
+    }
+
+
+    @Override
+    public TagKey<Block> getTag() {
+        return correctBlocksForDrops;
+    }
+
+    public ModdedTier correctBlocksForDrops(TagKey<Block> tag) {
+        this.correctBlocksForDrops = tag;
+        return this;
     }
 }

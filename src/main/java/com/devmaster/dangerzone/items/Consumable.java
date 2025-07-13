@@ -2,7 +2,6 @@
 
 package com.devmaster.dangerzone.items;
 
-import com.devmaster.dangerzone.misc.DangerZone;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -40,7 +39,7 @@ public class Consumable extends AItem
         super(new Item.Properties().stacksTo(stacksize).rarity(rarity));
     }
 
-    // Fixed constructor - using proper Item.Properties
+
     public Consumable(int stacksize)
     {
         super(new Item.Properties().stacksTo(stacksize));
@@ -209,7 +208,7 @@ public class Consumable extends AItem
         return this;
     }
 
-    // Renamed to avoid conflict with the overridden use() method
+
     protected void consumeItem(Level level, Player player, ItemStack stack) {
         if (useSoundSupplier != null && !level.isClientSide) {
             SoundEvent sound = useSoundSupplier.get();

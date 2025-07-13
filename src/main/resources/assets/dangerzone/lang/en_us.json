@@ -1,19 +1,29 @@
 {
   "item.dangerzone.bioraptor_scale": "Bioraptor Scale",
-  "item.dangerzone.mantis_claw": "Mantis Claw",
+  "item.dangerzone.water_dragon_scale": "Water Dragon Scale",
   "item.dangerzone.coarse_amethyst": "Coarse Amethyst",
+
   "item.dangerzone.coarse_amethyst_chestplate": "Coarse Amethyst Chestplate",
   "item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
   "item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",
   "item.dangerzone.coarse_amethyst_boots": "Coarse Amethyst Boots",
-  "itemGroup.adventurekraftablockstab": "§fAdventureKraft Blocks§f",
-  "itemGroup.adventurekraftbporestab": "§fAdventureKraft Petrified Ores§f",
-  "itemGroup.adventurekraftcfoodtab": "§fAdventureKraft Food§f",
-  "itemGroup.adventurekraftditemstab": "§fAdventureKraft Items§f",
-  "itemGroup.adventurekraftearmorytab": "§fAdventureKraft Armory§f",
-  "itemGroup.adventurekraftftoolstab": "§fAdventureKraft Tools§f",
-  "itemGroup.adventurekraftgweaponstab": "§fAdventureKraft Weapons§f",
-  "itemGroup.adventurekrafthwiptab": "§fAdventureKraft WIP§f"
+
+  "item.dangerzone.mantis_claw": "Mantis Claw",
+  "item.dangerzone.kyanite_sword": "Kyanite Sword",
+
+  "item.dangerzone.kyanite_pickaxe": "Kyanite Pickaxe",
+  "item.dangerzone.kyanite_axe": "Kyanite Axe",
+  "item.dangerzone.kyanite_shovel": "Kyanite Shovel",
+  "item.dangerzone.kyanite_hoe": "Kyanite Hoe",
+
+  "itemGroup.aadventurekraftaitemstab": "§fAdventureKraft Items§f",
+  "itemGroup.badventurekraftbarmorytab": "§fAdventureKraft Armory§f",
+  "itemGroup.cadventurekraftcweaponrytab": "§fAdventureKraft Weaponry§f",
+  "itemGroup.dadventurekraftdtoolstab": "§fAdventureKraft Tools§f",
+  "itemGroup.eadventurekrafteblockstab": "§fAdventureKraft Blocks§f",
+  "itemGroup.fadventurekraftfporestab": "§fAdventureKraft Petrified Ores§f",
+  "itemGroup.gadventurekraftgfoodtab": "§fAdventureKraft Food§f",
+  "itemGroup.hadventurekrafthwiptab": "§fAdventureKraft WIP§f"
 }
 
 
