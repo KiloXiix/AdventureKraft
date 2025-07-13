@@ -141,7 +141,7 @@ public abstract class Shovel extends ShovelItem {
                         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(
                                 BASE_ATTACK_SPEED_UUID,
                                 "Shovel modifier",
-                                -2.4F + config.attackSpeed,
+                                config.attackSpeed - 4.0F,  // This will give you the exact attack speed from config
                                 AttributeModifier.Operation.ADDITION));
 
                         if (movespeed != 0) {

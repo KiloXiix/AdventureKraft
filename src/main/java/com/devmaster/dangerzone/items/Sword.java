@@ -40,7 +40,7 @@ public abstract class Sword extends SwordItem {
     private static final String HAS_ENCHANTS_TAG = "hasEnchants";
 
     public Sword(ModdedTier tier, int durabilityMultiplier) {
-        super(tier, -1, -2.4F, new Properties().durability(tier.getUses() * durabilityMultiplier));
+        super(tier, -1, -2.5F, new Properties().durability(tier.getUses() * durabilityMultiplier));
         this.moddedTier = tier;
         this.properties = new Properties().durability(tier.getUses() * durabilityMultiplier);
         this.repairitem = tier.getRepairIngredient().getItems().length > 0
@@ -50,7 +50,7 @@ public abstract class Sword extends SwordItem {
     }
 
     public Sword(Properties properties) {
-        super(createTempTier(), -1, -2.4F, properties);
+        super(createTempTier(), -1, -2.5F, properties);
         this.properties = properties;
         this.moddedTier = createTempTier();
     }
@@ -189,7 +189,7 @@ public abstract class Sword extends SwordItem {
                         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(
                                 BASE_ATTACK_SPEED_UUID,
                                 "Sword modifier",
-                                -2.4F + config.attackSpeed,
+                                config.attackSpeed - 4.0F,  // This will give you the exact attack speed from config
                                 AttributeModifier.Operation.ADDITION));
 
                         if (movespeed != 0) {

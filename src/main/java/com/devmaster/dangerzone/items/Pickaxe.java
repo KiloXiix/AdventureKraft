@@ -155,7 +155,7 @@ public abstract class Pickaxe extends PickaxeItem {
                         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(
                                 BASE_ATTACK_SPEED_UUID,
                                 "Pickaxe modifier",
-                                -2.4F + config.attackSpeed,
+                                config.attackSpeed - 4.0F,  // This will give you the exact attack speed from config
                                 AttributeModifier.Operation.ADDITION));
 
                         if (movespeed != 0) {
