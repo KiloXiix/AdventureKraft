@@ -34,30 +34,91 @@ public class DZConfig {
     private static ForgeConfigSpec.IntValue coarseAmethystHelmetDurability;
     private static ForgeConfigSpec.IntValue coarseAmethystHelmetHitCost;
     private static ForgeConfigSpec.IntValue coarseAmethystHelmetEnchantability;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystHelmetToughness;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystHelmetKnockBackResistance;
+    private static ForgeConfigSpec.IntValue coarseAmethystHelmetToughness;
+    private static ForgeConfigSpec.IntValue coarseAmethystHelmetKnockBackResistance;
     private static ForgeConfigSpec.IntValue coarseAmethystHelmetArmor;
 
     private static ForgeConfigSpec.IntValue coarseAmethystChestplateDurability;
     private static ForgeConfigSpec.IntValue coarseAmethystChestplateHitCost;
     private static ForgeConfigSpec.IntValue coarseAmethystChestplateEnchantability;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystChestplateToughness;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystChestplateKnockBackResistance;
+    private static ForgeConfigSpec.IntValue coarseAmethystChestplateToughness;
+    private static ForgeConfigSpec.IntValue coarseAmethystChestplateKnockBackResistance;
     private static ForgeConfigSpec.IntValue coarseAmethystChestplateArmor;
 
     private static ForgeConfigSpec.IntValue coarseAmethystLeggingsDurability;
     private static ForgeConfigSpec.IntValue coarseAmethystLeggingsHitCost;
     private static ForgeConfigSpec.IntValue coarseAmethystLeggingsEnchantability;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystLeggingsToughness;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystLeggingsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue coarseAmethystLeggingsToughness;
+    private static ForgeConfigSpec.IntValue coarseAmethystLeggingsKnockBackResistance;
     private static ForgeConfigSpec.IntValue coarseAmethystLeggingsArmor;
 
     private static ForgeConfigSpec.IntValue coarseAmethystBootsDurability;
     private static ForgeConfigSpec.IntValue coarseAmethystBootsHitCost;
     private static ForgeConfigSpec.IntValue coarseAmethystBootsEnchantability;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystBootsToughness;
-    private static ForgeConfigSpec.DoubleValue coarseAmethystBootsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue coarseAmethystBootsToughness;
+    private static ForgeConfigSpec.IntValue coarseAmethystBootsKnockBackResistance;
     private static ForgeConfigSpec.IntValue coarseAmethystBootsArmor;
+
+
+    // Lapis Armor Attributes
+    private static ForgeConfigSpec.IntValue LapisHelmetDurability;
+    private static ForgeConfigSpec.IntValue LapisHelmetHitCost;
+    private static ForgeConfigSpec.IntValue LapisHelmetEnchantability;
+    private static ForgeConfigSpec.IntValue LapisHelmetToughness;
+    private static ForgeConfigSpec.IntValue LapisHelmetKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LapisHelmetArmor;
+
+    private static ForgeConfigSpec.IntValue LapisChestplateDurability;
+    private static ForgeConfigSpec.IntValue LapisChestplateHitCost;
+    private static ForgeConfigSpec.IntValue LapisChestplateEnchantability;
+    private static ForgeConfigSpec.IntValue LapisChestplateToughness;
+    private static ForgeConfigSpec.IntValue LapisChestplateKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LapisChestplateArmor;
+
+    private static ForgeConfigSpec.IntValue LapisLeggingsDurability;
+    private static ForgeConfigSpec.IntValue LapisLeggingsHitCost;
+    private static ForgeConfigSpec.IntValue LapisLeggingsEnchantability;
+    private static ForgeConfigSpec.IntValue LapisLeggingsToughness;
+    private static ForgeConfigSpec.IntValue LapisLeggingsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LapisLeggingsArmor;
+
+    private static ForgeConfigSpec.IntValue LapisBootsDurability;
+    private static ForgeConfigSpec.IntValue LapisBootsHitCost;
+    private static ForgeConfigSpec.IntValue LapisBootsEnchantability;
+    private static ForgeConfigSpec.IntValue LapisBootsToughness;
+    private static ForgeConfigSpec.IntValue LapisBootsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LapisBootsArmor;
+
+
+    // Lava Crystal Armor Attributes
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetDurability;
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetHitCost;
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetEnchantability;
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetToughness;
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LavaCrystalHelmetArmor;
+
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateDurability;
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateHitCost;
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateEnchantability;
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateToughness;
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LavaCrystalChestplateArmor;
+
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsDurability;
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsHitCost;
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsEnchantability;
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsToughness;
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LavaCrystalLeggingsArmor;
+
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsDurability;
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsHitCost;
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsEnchantability;
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsToughness;
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue LavaCrystalBootsArmor;
+
 
 
 
@@ -109,6 +170,52 @@ public class DZConfig {
     private static ForgeConfigSpec.IntValue KyaniteShovelEfficiency;
     private static ForgeConfigSpec.IntValue KyaniteShovelAttackSpeed;
 
+
+
+    //Lapis Sword
+    private static ForgeConfigSpec.IntValue LapisSwordDurability;
+    private static ForgeConfigSpec.IntValue LapisSwordHitCost;
+    private static ForgeConfigSpec.IntValue LapisSwordEnchantability;
+    private static ForgeConfigSpec.IntValue LapisSwordDamage;
+    private static ForgeConfigSpec.IntValue LapisSwordHarvestLevel;
+    private static ForgeConfigSpec.IntValue LapisSwordEfficiency;
+    private static ForgeConfigSpec.IntValue LapisSwordAttackSpeed;
+
+    //Lapis Pickaxe
+    private static ForgeConfigSpec.IntValue LapisPickaxeDurability;
+    private static ForgeConfigSpec.IntValue LapisPickaxeHitCost;
+    private static ForgeConfigSpec.IntValue LapisPickaxeEnchantability;
+    private static ForgeConfigSpec.IntValue LapisPickaxeDamage;
+    private static ForgeConfigSpec.IntValue LapisPickaxeHarvestLevel;
+    private static ForgeConfigSpec.IntValue LapisPickaxeEfficiency;
+    private static ForgeConfigSpec.IntValue LapisPickaxeAttackSpeed;
+
+    //Lapis Axe
+    private static ForgeConfigSpec.IntValue LapisAxeDurability;
+    private static ForgeConfigSpec.IntValue LapisAxeHitCost;
+    private static ForgeConfigSpec.IntValue LapisAxeEnchantability;
+    private static ForgeConfigSpec.IntValue LapisAxeDamage;
+    private static ForgeConfigSpec.IntValue LapisAxeHarvestLevel;
+    private static ForgeConfigSpec.IntValue LapisAxeEfficiency;
+    private static ForgeConfigSpec.IntValue LapisAxeAttackSpeed;
+
+    //Lapis Hoe
+    private static ForgeConfigSpec.IntValue LapisHoeDurability;
+    private static ForgeConfigSpec.IntValue LapisHoeHitCost;
+    private static ForgeConfigSpec.IntValue LapisHoeEnchantability;
+    private static ForgeConfigSpec.IntValue LapisHoeDamage;
+    private static ForgeConfigSpec.IntValue LapisHoeHarvestLevel;
+    private static ForgeConfigSpec.IntValue LapisHoeEfficiency;
+    private static ForgeConfigSpec.IntValue LapisHoeAttackSpeed;
+
+    //Lapis Shovel
+    private static ForgeConfigSpec.IntValue LapisShovelDurability;
+    private static ForgeConfigSpec.IntValue LapisShovelHitCost;
+    private static ForgeConfigSpec.IntValue LapisShovelEnchantability;
+    private static ForgeConfigSpec.IntValue LapisShovelDamage;
+    private static ForgeConfigSpec.IntValue LapisShovelHarvestLevel;
+    private static ForgeConfigSpec.IntValue LapisShovelEfficiency;
+    private static ForgeConfigSpec.IntValue LapisShovelAttackSpeed;
 
 
 
@@ -241,71 +348,194 @@ public class DZConfig {
 
 
 
-
-
-        builder.push("Coarse Amethyst Armor");
-
-        builder.push("Helmet");
-        coarseAmethystHelmetDurability = builder.comment("Helmet durability (Default: 1300)")
-                .defineInRange("durability", 1300, 0, 10000);
-        coarseAmethystHelmetHitCost = builder.comment("Helmet durability loss per hit (Default: 1)")
-                .defineInRange("hitCost", 1, 0, 1000);
-        coarseAmethystHelmetEnchantability = builder.comment("Helmet enchantability (Default: 40)")
-                .defineInRange("enchantability", 40, 0, 1000);
-        coarseAmethystHelmetToughness = builder.comment("Helmet toughness (Default: 0.0)")
-                .defineInRange("toughness", 0.0, 0.0, 20.0);
-        coarseAmethystHelmetKnockBackResistance = builder.comment("Helmet knockback resistance (Default: 0.0)")
-                .defineInRange("knockBackResistance", 0.0, 0.0, 1.0);
-        coarseAmethystHelmetArmor = builder.comment("Helmet armor value (Default: 23)")
-                .defineInRange("armor", 23, 0, 1000);
+        // Lapis Sword
+        builder.push("Lapis Sword");
+        LapisSwordDamage = builder.comment("Damage dealt by Lapis Sword (Default: 30)")
+                .defineInRange("damage", 30, 0, 1000);
+        LapisSwordDurability = builder.comment("Durability of Lapis Sword (Default: 2000)")
+                .defineInRange("durability", 2000, 0, 10000);
+        LapisSwordHitCost = builder.comment("Durability lost per hit (Default: 1)")
+                .defineInRange("hitCost", 1, 0, 10000);
+        LapisSwordHarvestLevel = builder.comment("Harvest level of Lapis Sword (Default: 4)")
+                .defineInRange("harvestLevel", 4, 0, 1000);
+        LapisSwordEnchantability = builder.comment("Enchantability of Lapis Sword (Default: 70)")
+                .defineInRange("enchantability", 70, 0, 1000);
+        LapisSwordEfficiency = builder.comment("Efficiency of Lapis Sword (Default: 11)")
+                .defineInRange("efficiency", 11, 0, 1000);
+        LapisSwordAttackSpeed = builder.comment("Attack speed of Lapis Sword (Default: 1)")
+                .defineInRange("attackSpeed", 1, 0, 1000);
         builder.pop();
 
-        builder.push("Chestplate");
-        coarseAmethystChestplateDurability = builder.comment("Chestplate durability (Default: 1500)")
-                .defineInRange("durability", 1500, 0, 10000);
-        coarseAmethystChestplateHitCost = builder.comment("Chestplate durability loss per hit (Default: 1)")
-                .defineInRange("hitCost", 1, 0, 1000);
-        coarseAmethystChestplateEnchantability = builder.comment("Chestplate enchantability (Default: 40)")
-                .defineInRange("enchantability", 40, 0, 1000);
-        coarseAmethystChestplateToughness = builder.comment("Chestplate toughness (Default: 0.0)")
-                .defineInRange("toughness", 0.0, 0.0, 20.0);
-        coarseAmethystChestplateKnockBackResistance = builder.comment("Chestplate knockback resistance (Default: 0.0)")
-                .defineInRange("knockBackResistance", 0.0, 0.0, 1.0);
-        coarseAmethystChestplateArmor = builder.comment("Chestplate armor value (Default: 23)")
-                .defineInRange("armor", 23, 0, 1000);
+
+        // Lapis Pickaxe
+        builder.push("Lapis Pickaxe");
+        LapisPickaxeDamage = builder.comment("Damage dealt by Lapis Pickaxe (Default: 30)")
+                .defineInRange("damage", 10, 0, 1000);
+        LapisPickaxeDurability = builder.comment("Durability of Lapis Pickaxe (Default: 2000)")
+                .defineInRange("durability", 2000, 0, 10000);
+        LapisPickaxeHitCost = builder.comment("Durability lost per hit (Default: 1)")
+                .defineInRange("hitCost", 1, 0, 10000);
+        LapisPickaxeHarvestLevel = builder.comment("Harvest level of Lapis Pickaxe (Default: 4)")
+                .defineInRange("harvestLevel", 4, 0, 1000);
+        LapisPickaxeEnchantability = builder.comment("Enchantability of Lapis Pickaxe (Default: 70)")
+                .defineInRange("enchantability", 70, 0, 1000);
+        LapisPickaxeEfficiency = builder.comment("Efficiency of Lapis Pickaxe (Default: 11)")
+                .defineInRange("efficiency", 1, 0, 1000);
+        LapisPickaxeAttackSpeed = builder.comment("Attack speed of Lapis Pickaxe (Default: 1)")
+                .defineInRange("attackSpeed", 1, 0, 1000);
         builder.pop();
 
-        builder.push("Leggings");
-        coarseAmethystLeggingsDurability = builder.comment("Leggings durability (Default: 1600)")
-                .defineInRange("durability", 1600, 0, 10000);
-        coarseAmethystLeggingsHitCost = builder.comment("Leggings durability loss per hit (Default: 1)")
-                .defineInRange("hitCost", 1, 0, 1000);
-        coarseAmethystLeggingsEnchantability = builder.comment("Leggings enchantability (Default: 40)")
-                .defineInRange("enchantability", 40, 0, 1000);
-        coarseAmethystLeggingsToughness = builder.comment("Leggings toughness (Default: 0.0)")
-                .defineInRange("toughness", 0.0, 0.0, 20.0);
-        coarseAmethystLeggingsKnockBackResistance = builder.comment("Leggings knockback resistance (Default: 0.0)")
-                .defineInRange("knockBackResistance", 0.0, 0.0, 1.0);
-        coarseAmethystLeggingsArmor = builder.comment("Leggings armor value (Default: 23)")
-                .defineInRange("armor", 23, 0, 1000);
+
+        // Lapis Axe
+        builder.push("Lapis Axe");
+        LapisAxeDamage = builder.comment("Damage dealt by Lapis Axe (Default: 30)")
+                .defineInRange("damage", 10, 0, 1000);
+        LapisAxeDurability = builder.comment("Durability of Lapis Axe (Default: 2000)")
+                .defineInRange("durability", 2000, 0, 10000);
+        LapisAxeHitCost = builder.comment("Durability lost per hit (Default: 1)")
+                .defineInRange("hitCost", 1, 0, 10000);
+        LapisAxeHarvestLevel = builder.comment("Harvest level of Lapis Axe (Default: 4)")
+                .defineInRange("harvestLevel", 4, 0, 1000);
+        LapisAxeEnchantability = builder.comment("Enchantability of Lapis Axe (Default: 70)")
+                .defineInRange("enchantability", 70, 0, 1000);
+        LapisAxeEfficiency = builder.comment("Efficiency of Lapis Axe (Default: 11)")
+                .defineInRange("efficiency", 1, 0, 1000);
+        LapisAxeAttackSpeed = builder.comment("Attack speed of Lapis Axe (Default: 1)")
+                .defineInRange("attackSpeed", 1, 0, 1000);
         builder.pop();
 
-        builder.push("Boots");
-        coarseAmethystBootsDurability = builder.comment("Boots durability (Default: 1100)")
-                .defineInRange("durability", 1100, 0, 10000);
-        coarseAmethystBootsHitCost = builder.comment("Boots durability loss per hit (Default: 1)")
-                .defineInRange("hitCost", 1, 0, 1000);
-        coarseAmethystBootsEnchantability = builder.comment("Boots enchantability (Default: 40)")
-                .defineInRange("enchantability", 40, 0, 1000);
-        coarseAmethystBootsToughness = builder.comment("Boots toughness (Default: 0.0)")
-                .defineInRange("toughness", 0.0, 0.0, 20.0);
-        coarseAmethystBootsKnockBackResistance = builder.comment("Boots knockback resistance (Default: 0.0)")
-                .defineInRange("knockBackResistance", 0.0, 0.0, 1.0);
-        coarseAmethystBootsArmor = builder.comment("Boots armor value (Default: 23)")
-                .defineInRange("armor", 23, 0, 1000);
+
+        // Lapis Hoe
+        builder.push("Lapis Hoe");
+        LapisHoeDamage = builder.comment("Damage dealt by Lapis Hoe (Default: 30)")
+                .defineInRange("damage", 10, 0, 1000);
+        LapisHoeDurability = builder.comment("Durability of Lapis Hoe (Default: 2000)")
+                .defineInRange("durability", 2000, 0, 10000);
+        LapisHoeHitCost = builder.comment("Durability lost per hit (Default: 1)")
+                .defineInRange("hitCost", 1, 0, 10000);
+        LapisHoeHarvestLevel = builder.comment("Harvest level of Lapis Hoe (Default: 4)")
+                .defineInRange("harvestLevel", 4, 0, 1000);
+        LapisHoeEnchantability = builder.comment("Enchantability of Lapis Hoe (Default: 70)")
+                .defineInRange("enchantability", 70, 0, 1000);
+        LapisHoeEfficiency = builder.comment("Efficiency of Lapis Hoe (Default: 11)")
+                .defineInRange("efficiency", 1, 0, 1000);
+        LapisHoeAttackSpeed = builder.comment("Attack speed of Lapis Hoe (Default: 1)")
+                .defineInRange("attackSpeed", 1, 0, 1000);
         builder.pop();
 
-        builder.pop(); // Coarse Amethyst Armor End
+
+        // Lapis Shovel
+        builder.push("Lapis Shovel");
+        LapisShovelDamage = builder.comment("Damage dealt by Lapis Shovel (Default: 30)")
+                .defineInRange("damage", 10, 0, 1000);
+        LapisShovelDurability = builder.comment("Durability of Lapis Shovel (Default: 2000)")
+                .defineInRange("durability", 2000, 0, 10000);
+        LapisShovelHitCost = builder.comment("Durability lost per hit (Default: 1)")
+                .defineInRange("hitCost", 1, 0, 10000);
+        LapisShovelHarvestLevel = builder.comment("Harvest level of Lapis Shovel (Default: 4)")
+                .defineInRange("harvestLevel", 4, 0, 1000);
+        LapisShovelEnchantability = builder.comment("Enchantability of Lapis Shovel (Default: 70)")
+                .defineInRange("enchantability", 70, 0, 1000);
+        LapisShovelEfficiency = builder.comment("Efficiency of Lapis Shovel (Default: 11)")
+                .defineInRange("efficiency", 1, 0, 1000);
+        LapisShovelAttackSpeed = builder.comment("Attack speed of Lapis Shovel (Default: 1)")
+                .defineInRange("attackSpeed", 1, 0, 1000);
+        builder.pop();
+
+
+        // === Armor ===
+
+        builder.push("Armor Sets");
+
+        //Coarse Amethyst Armor Set
+        builder.comment("Coarse Amethyst Set Attributes");
+        coarseAmethystHelmetDurability = builder.comment("Coarse Amethyst Helmet Durability").defineInRange("coarseAmethystHelmetDurability", 1300, 0, 10000);
+        coarseAmethystHelmetHitCost = builder.comment("How much durability a Coarse Amethyst helmet loses when a entity hits").defineInRange("coarseAmethystHelmetHitCost", 1, 0, 1000);
+        coarseAmethystHelmetArmor = builder.comment("How much armor the Coarse Amethyst Helmet Has").defineInRange("coarseAmethystHelmetArmor", 23, 0, 1000);
+        coarseAmethystHelmetEnchantability = builder.comment("Coarse Amethyst Helmet Enchantability").defineInRange("coarseAmethystHelmetEnchantability", 40, 0, 1000);
+        coarseAmethystHelmetToughness = builder.comment("Coarse Amethyst Helmet Toughness").defineInRange("coarseAmethystHelmetToughness", 0, 0, 1000);
+        coarseAmethystHelmetKnockBackResistance = builder.comment("Coarse Amethyst Helmet Knockback Resistance").defineInRange("coarseAmethystHelmetKnockBackResistance", 0, 0, 1000);
+
+        coarseAmethystChestplateArmor = builder.comment("How much armor the Coarse Amethyst Chestplate has").defineInRange("coarseAmethystChestplateArmor", 23, 0, 1000);
+        coarseAmethystChestplateEnchantability = builder.comment("Coarse Amethyst Chestplate Enchantability").defineInRange("coarseAmethystChestplateEnchantability", 40, 0, 1000);
+        coarseAmethystChestplateToughness = builder.comment("Coarse Amethyst Boots Toughness").defineInRange("coarseAmethystChestplateToughness", 0, 0, 1000);
+        coarseAmethystChestplateKnockBackResistance = builder.comment("Coarse Amethyst Chestplate  Knockback Resistance").defineInRange("coarseAmethystChestplateKnockBackResistance", 0, 0, 1000);
+        coarseAmethystChestplateDurability = builder.comment("Coarse Amethyst Chestplate Durability").defineInRange("coarseAmethystChestplateDurability", 1500, 0, 10000);
+        coarseAmethystChestplateHitCost = builder.comment("How much durability a Coarse Amethyst chestplate loses when a entity hits").defineInRange("coarseAmethystChestplateHitCost", 1, 0, 1000);
+
+        coarseAmethystLeggingsArmor = builder.comment("How much armor the Coarse Amethyst Leggings have").defineInRange("coarseAmethystLeggingsArmor", 23, 0, 1000);
+        coarseAmethystLeggingsDurability = builder.comment("Coarse Amethyst Leggings Durability").defineInRange("coarseAmethystLeggingsDurability", 1600, 0, 10000);
+        coarseAmethystLeggingsHitCost = builder.comment("How much durability the Coarse Amethyst leggings lose when a entity hits").defineInRange("coarseAmethystLeggingsHitCost", 1, 0, 1000);
+        coarseAmethystLeggingsEnchantability = builder.comment("Coarse Amethyst Leggings Enchantability").defineInRange("coarseAmethystLeggingsEnchantability", 40, 0, 1000);
+        coarseAmethystLeggingsToughness = builder.comment("Coarse Amethyst Leggings Toughness").defineInRange("coarseAmethystLeggingsToughness", 0, 0, 1000);
+        coarseAmethystLeggingsKnockBackResistance = builder.comment("Coarse Amethyst Leggings Knockback Resistance").defineInRange("coarseAmethystLeggingsKnockBackResistance", 0, 0, 1000);
+
+        coarseAmethystBootsDurability = builder.comment("Coarse Amethyst Boots Durability").defineInRange("coarseAmethystBootsDurability", 1100, 0, 10000);
+        coarseAmethystBootsHitCost = builder.comment("How much durability the Coarse Amethyst boots lose when a entity hits").defineInRange("coarseAmethystBootsHitCost", 1, 0, 1000);
+        coarseAmethystBootsArmor = builder.comment("How much armor the Coarse Amethyst boots have").defineInRange("coarseAmethystBootsArmor", 23, 0, 1000);
+        coarseAmethystBootsEnchantability = builder.comment("Coarse Amethyst Boots Enchantability").defineInRange("coarseAmethystBootsEnchantability", 40, 0, 1000);
+        coarseAmethystBootsToughness = builder.comment("Coarse Amethyst Boots Toughness").defineInRange("coarseAmethystBootsToughness", 0, 0, 1000);
+        coarseAmethystBootsKnockBackResistance = builder.comment("Coarse Amethyst Boots Knockback Resistance").defineInRange("coarseAmethystBootsKnockBackResistance", 0, 0, 1000);
+
+
+
+        // Lapis Armor Set
+        LapisHelmetDurability = builder.comment("Lapis Helmet Durability").defineInRange("LapisHelmetDurability", 1170, 0, 10000);
+        LapisHelmetHitCost = builder.comment("How much durability the Lapis Helmet loses when an entity hit").defineInRange("LapisHelmetHitCost", 1, 0, 10000);
+        LapisHelmetArmor = builder.comment("How much armor the Lapis Helmet has").defineInRange("LapisHelmetArmor", 3, 0, 1000);
+        LapisHelmetEnchantability = builder.comment("Lapis Helmet Enchantability").defineInRange("LapisHelmetEnchantability", 60, 0, 1000);
+        LapisHelmetToughness = builder.comment("Lapis Helmet Toughness").defineInRange("LapisHelmetToughness", 0, 0, 1000);
+        LapisHelmetKnockBackResistance = builder.comment("Lapis Helmet Knockback Resistance").defineInRange("LapisHelmetKnockBackResistance", 0, 0, 1000);
+        
+        LapisChestplateDurability = builder.comment("Lapis Chestplate Durability").defineInRange("LapisChestplateDurability", 1350, 0, 10000);
+        LapisChestplateHitCost = builder.comment("How much durability the Lapis chestplate loses when an entity is hit").defineInRange("LapisChestplateHitCost", 1, 0, 10000);
+        LapisChestplateArmor = builder.comment("How much armor the Lapis Chestplate has").defineInRange("LapisChestplateArmor", 3, 0, 1000);
+        LapisChestplateEnchantability = builder.comment("Lapis Chestplate Enchantability").defineInRange("LapisChestplateEnchantability", 60, 0, 1000);
+        LapisChestplateToughness = builder.comment("Lapis Chestplate Toughness").defineInRange("LapisChestplateToughness", 0, 0, 1000);
+        LapisChestplateKnockBackResistance = builder.comment("Lapis Chestplate Knockback Resistance").defineInRange("LapisChestplateKnockBackResistance", 0, 0, 1000);
+        
+        LapisLeggingsDurability = builder.comment("Lapis Leggings Durability").defineInRange("LapisLeggingsDurability", 1440, 100, 10000);
+        LapisLeggingsHitCost = builder.comment("How much durability the Lapis leggings loses when an entity is hit").defineInRange("LapisLeggingsHitCost", 1, 0, 10000);
+        LapisLeggingsArmor = builder.comment("How much armor the Lapis Leggings has").defineInRange("LapisLeggingsArmor", 3, 0, 1000);
+        LapisLeggingsEnchantability = builder.comment("Lapis Leggings Enchantability").defineInRange("LapisLeggingsEnchantability", 60, 0, 1000);
+        LapisLeggingsToughness = builder.comment("Lapis Leggings Toughness").defineInRange("LapisLeggingsToughness", 0, 0, 1000);
+        LapisLeggingsKnockBackResistance = builder.comment("Lapis Leggings Knockback Resistance").defineInRange("LapisLeggingsKnockBackResistance", 0, 0, 1000);
+        
+        LapisBootsDurability = builder.comment("Lapis Boots Durability").defineInRange("LapisBootsDurability", 990, 0, 10000);
+        LapisBootsHitCost = builder.comment("How much durability the Lapis boots lose when an entity hits").defineInRange("LapisBootsHitCost", 1, 0, 10000);
+        LapisBootsArmor = builder.comment("How much armor the Lapis Boots has").defineInRange("LapisBootsArmor", 3, 0, 1000);
+        LapisBootsEnchantability = builder.comment("Lapis Boots Enchantability").defineInRange("LapisBootsEnchantability", 60, 0, 1000);
+        LapisBootsToughness = builder.comment("Lapis Boots Toughness").defineInRange("LapisBootsToughness", 0, 0, 1000);
+        LapisBootsKnockBackResistance = builder.comment("Lapis Boots Knockback Resistance").defineInRange("LapisBootsKnockBackResistance", 0, 0, 1000);
+
+
+        // Lava Crystal Armor Set
+        LavaCrystalHelmetDurability = builder.comment("Lava Crystal Helmet Durability").defineInRange("Lava CrystalHelmetDurability", 1170, 0, 10000);
+        LavaCrystalHelmetHitCost = builder.comment("How much durability the Lava Crystal Helmet loses when an entity hit").defineInRange("Lava CrystalHelmetHitCost", 1, 0, 10000);
+        LavaCrystalHelmetArmor = builder.comment("How much armor the Lava Crystal Helmet has").defineInRange("Lava CrystalHelmetArmor", 3, 0, 1000);
+        LavaCrystalHelmetEnchantability = builder.comment("Lava Crystal Helmet Enchantability").defineInRange("Lava CrystalHelmetEnchantability", 60, 0, 1000);
+        LavaCrystalHelmetToughness = builder.comment("Lava Crystal Helmet Toughness").defineInRange("Lava CrystalHelmetToughness", 0, 0, 1000);
+        LavaCrystalHelmetKnockBackResistance = builder.comment("Lava Crystal Helmet Knockback Resistance").defineInRange("Lava CrystalHelmetKnockBackResistance", 0, 0, 1000);
+        LavaCrystalChestplateDurability = builder.comment("Lava Crystal Chestplate Durability").defineInRange("Lava CrystalChestplateDurability", 1350, 0, 10000);
+        LavaCrystalChestplateHitCost = builder.comment("How much durability the Lava Crystal chestplate loses when an entity is hit").defineInRange("Lava CrystalChestplateHitCost", 1, 0, 10000);
+        LavaCrystalChestplateArmor = builder.comment("How much armor the Lava Crystal Chestplate has").defineInRange("Lava CrystalChestplateArmor", 3, 0, 1000);
+        LavaCrystalChestplateEnchantability = builder.comment("Lava Crystal Chestplate Enchantability").defineInRange("Lava CrystalChestplateEnchantability", 60, 0, 1000);
+        LavaCrystalChestplateToughness = builder.comment("Lava Crystal Chestplate Toughness").defineInRange("Lava CrystalChestplateToughness", 0, 0, 1000);
+        LavaCrystalChestplateKnockBackResistance = builder.comment("Lava Crystal Chestplate Knockback Resistance").defineInRange("Lava CrystalChestplateKnockBackResistance", 0, 0, 1000);
+        LavaCrystalLeggingsDurability = builder.comment("Lava Crystal Leggings Durability").defineInRange("Lava CrystalLeggingsDurability", 1440, 100, 10000);
+        LavaCrystalLeggingsHitCost = builder.comment("How much durability the Lava Crystal leggings loses when an entity is hit").defineInRange("Lava CrystalLeggingsHitCost", 1, 0, 10000);
+        LavaCrystalLeggingsArmor = builder.comment("How much armor the Lava Crystal Leggings has").defineInRange("Lava CrystalLeggingsArmor", 3, 0, 1000);
+        LavaCrystalLeggingsEnchantability = builder.comment("Lava Crystal Leggings Enchantability").defineInRange("Lava CrystalLeggingsEnchantability", 60, 0, 1000);
+        LavaCrystalLeggingsToughness = builder.comment("Lava Crystal Leggings Toughness").defineInRange("Lava CrystalLeggingsToughness", 0, 0, 1000);
+        LavaCrystalLeggingsKnockBackResistance = builder.comment("Lava Crystal Leggings Knockback Resistance").defineInRange("Lava CrystalLeggingsKnockBackResistance", 0, 0, 1000);
+        LavaCrystalBootsDurability = builder.comment("Lava Crystal Boots Durability").defineInRange("Lava CrystalBootsDurability", 990, 0, 10000);
+        LavaCrystalBootsHitCost = builder.comment("How much durability the Lava Crystal boots lose when an entity hits").defineInRange("Lava CrystalBootsHitCost", 1, 0, 10000);
+        LavaCrystalBootsArmor = builder.comment("How much armor the Lava Crystal Boots has").defineInRange("Lava CrystalBootsArmor", 3, 0, 1000);
+        LavaCrystalBootsEnchantability = builder.comment("Lava Crystal Boots Enchantability").defineInRange("Lava CrystalBootsEnchantability", 60, 0, 1000);
+        LavaCrystalBootsToughness = builder.comment("Lava Crystal Boots Toughness").defineInRange("Lava CrystalBootsToughness", 0, 0, 1000);
+        LavaCrystalBootsKnockBackResistance = builder.comment("Lava Crystal Boots Knockback Resistance").defineInRange("Lava CrystalBootsKnockBackResistance", 0, 0, 1000);
+
+
 
 
     }
@@ -372,7 +602,58 @@ public class DZConfig {
 
 
 
+    // Lapis Sword Getters
+    public static int getLapisSwordDamage() { return LapisSwordDamage != null ? LapisSwordDamage.get() : 30; }
+    public static int getLapisSwordDurability() { return LapisSwordDurability != null ? LapisSwordDurability.get() : 2000; }
+    public static int getLapisSwordHitCost() { return LapisSwordHitCost != null ? LapisSwordHitCost.get() : 1; }
+    public static int getLapisSwordHarvestLevel() { return LapisSwordHarvestLevel != null ? LapisSwordHarvestLevel.get() : 4; }
+    public static int getLapisSwordEnchantability() { return LapisSwordEnchantability != null ? LapisSwordEnchantability.get() : 70; }
+    public static float getLapisSwordEfficiency() { return LapisSwordEfficiency != null ? LapisSwordEfficiency.get() : 11; }
+    public static float getLapisSwordAttackSpeed() { return LapisSwordAttackSpeed != null ? LapisSwordAttackSpeed.get() : 1; }
 
+
+    // Lapis Pickaxe Getters
+    public static int getLapisPickaxeDamage() { return LapisPickaxeDamage != null ? LapisPickaxeDamage.get() : 10; }
+    public static int getLapisPickaxeDurability() { return LapisPickaxeDurability != null ? LapisPickaxeDurability.get() : 2000; }
+    public static int getLapisPickaxeHitCost() { return LapisPickaxeHitCost != null ? LapisPickaxeHitCost.get() : 1; }
+    public static int getLapisPickaxeHarvestLevel() { return LapisPickaxeHarvestLevel != null ? LapisPickaxeHarvestLevel.get() : 4; }
+    public static int getLapisPickaxeEnchantability() { return LapisPickaxeEnchantability != null ? LapisPickaxeEnchantability.get() : 70; }
+    public static float getLapisPickaxeEfficiency() { return LapisPickaxeEfficiency != null ? LapisPickaxeEfficiency.get() : 1; }
+    public static float getLapisPickaxeAttackSpeed() { return LapisPickaxeAttackSpeed != null ? LapisPickaxeAttackSpeed.get() : 1; }
+
+
+    // Lapis Axe Getters
+    public static int getLapisAxeDamage() { return LapisAxeDamage != null ? LapisAxeDamage.get() : 10; }
+    public static int getLapisAxeDurability() { return LapisAxeDurability != null ? LapisAxeDurability.get() : 2000; }
+    public static int getLapisAxeHitCost() { return LapisAxeHitCost != null ? LapisAxeHitCost.get() : 1; }
+    public static int getLapisAxeHarvestLevel() { return LapisAxeHarvestLevel != null ? LapisAxeHarvestLevel.get() : 4; }
+    public static int getLapisAxeEnchantability() { return LapisAxeEnchantability != null ? LapisAxeEnchantability.get() : 70; }
+    public static float getLapisAxeEfficiency() { return LapisAxeEfficiency != null ? LapisAxeEfficiency.get() : 1; }
+    public static float getLapisAxeAttackSpeed() { return LapisAxeAttackSpeed != null ? LapisAxeAttackSpeed.get() : 1; }
+
+
+    // Lapis Hoe Getters
+    public static int getLapisHoeDamage() { return LapisHoeDamage != null ? LapisHoeDamage.get() : 10; }
+    public static int getLapisHoeDurability() { return LapisHoeDurability != null ? LapisHoeDurability.get() : 2000; }
+    public static int getLapisHoeHitCost() { return LapisHoeHitCost != null ? LapisHoeHitCost.get() : 1; }
+    public static int getLapisHoeHarvestLevel() { return LapisHoeHarvestLevel != null ? LapisHoeHarvestLevel.get() : 4; }
+    public static int getLapisHoeEnchantability() { return LapisHoeEnchantability != null ? LapisHoeEnchantability.get() : 70; }
+    public static float getLapisHoeEfficiency() { return LapisHoeEfficiency != null ? LapisHoeEfficiency.get() : 1; }
+    public static float getLapisHoeAttackSpeed() { return LapisHoeAttackSpeed != null ? LapisHoeAttackSpeed.get() : 1; }
+
+
+    // Lapis Shovel Getters
+    public static int getLapisShovelDamage() { return LapisShovelDamage != null ? LapisShovelDamage.get() : 10; }
+    public static int getLapisShovelDurability() { return LapisShovelDurability != null ? LapisShovelDurability.get() : 2000; }
+    public static int getLapisShovelHitCost() { return LapisShovelHitCost != null ? LapisShovelHitCost.get() : 1; }
+    public static int getLapisShovelHarvestLevel() { return LapisShovelHarvestLevel != null ? LapisShovelHarvestLevel.get() : 4; }
+    public static int getLapisShovelEnchantability() { return LapisShovelEnchantability != null ? LapisShovelEnchantability.get() : 70; }
+    public static float getLapisShovelEfficiency() { return LapisShovelEfficiency != null ? LapisShovelEfficiency.get() : 1; }
+    public static float getLapisShovelAttackSpeed() { return LapisShovelAttackSpeed != null ? LapisShovelAttackSpeed.get() : 1; }
+
+
+
+    // === Armors ===
 
     // Coarse Amethyst Helmet Getters
     public static int getCoarseAmethystHelmetDurability() { return coarseAmethystHelmetDurability != null ? coarseAmethystHelmetDurability.get() : 1300; }
@@ -408,6 +689,80 @@ public class DZConfig {
     public static double getCoarseAmethystBootsToughness() { return coarseAmethystBootsToughness != null ? coarseAmethystBootsToughness.get() : 0.0; }
     public static double getCoarseAmethystBootsKnockBackResistance() { return coarseAmethystBootsKnockBackResistance != null ? coarseAmethystBootsKnockBackResistance.get() : 0.0; }
     public static int getCoarseAmethystBootsArmor() { return coarseAmethystBootsArmor != null ? coarseAmethystBootsArmor.get() : 23; }
+
+
+
+    // Lapis Helmet Getters
+    public static int getLapisHelmetDurability() { return LapisHelmetDurability != null ? LapisHelmetDurability.get() : 1170; }
+    public static int getLapisHelmetHitCost() { return LapisHelmetHitCost != null ? LapisHelmetHitCost.get() : 1; }
+    public static int getLapisHelmetEnchantability() { return LapisHelmetEnchantability != null ? LapisHelmetEnchantability.get() : 60; }
+    public static double getLapisHelmetToughness() { return LapisHelmetToughness != null ? LapisHelmetToughness.get() : 0.0; }
+    public static double getLapisHelmetKnockBackResistance() { return LapisHelmetKnockBackResistance != null ? LapisHelmetKnockBackResistance.get() : 0.0; }
+    public static int getLapisHelmetArmor() { return LapisHelmetArmor != null ? LapisHelmetArmor.get() : 3; }
+
+
+    // Lapis Chestplate Getters
+    public static int getLapisChestplateDurability() { return LapisChestplateDurability != null ? LapisChestplateDurability.get() : 1350; }
+    public static int getLapisChestplateHitCost() { return LapisChestplateHitCost != null ? LapisChestplateHitCost.get() : 1; }
+    public static int getLapisChestplateEnchantability() { return LapisChestplateEnchantability != null ? LapisChestplateEnchantability.get() : 60; }
+    public static double getLapisChestplateToughness() { return LapisChestplateToughness != null ? LapisChestplateToughness.get() : 0.0; }
+    public static double getLapisChestplateKnockBackResistance() { return LapisChestplateKnockBackResistance != null ? LapisChestplateKnockBackResistance.get() : 0.0; }
+    public static int getLapisChestplateArmor() { return LapisChestplateArmor != null ? LapisChestplateArmor.get() : 3; }
+
+
+    // Lapis Leggings Getters
+    public static int getLapisLeggingsDurability() { return LapisLeggingsDurability != null ? LapisLeggingsDurability.get() : 1440; }
+    public static int getLapisLeggingsHitCost() { return LapisLeggingsHitCost != null ? LapisLeggingsHitCost.get() : 1; }
+    public static int getLapisLeggingsEnchantability() { return LapisLeggingsEnchantability != null ? LapisLeggingsEnchantability.get() : 60; }
+    public static double getLapisLeggingsToughness() { return LapisLeggingsToughness != null ? LapisLeggingsToughness.get() : 0.0; }
+    public static double getLapisLeggingsKnockBackResistance() { return LapisLeggingsKnockBackResistance != null ? LapisLeggingsKnockBackResistance.get() : 0.0; }
+    public static int getLapisLeggingsArmor() { return LapisLeggingsArmor != null ? LapisLeggingsArmor.get() : 3; }
+
+
+    // Lapis Boots Getters
+    public static int getLapisBootsDurability() { return LapisBootsDurability != null ? LapisBootsDurability.get() : 990; }
+    public static int getLapisBootsHitCost() { return LapisBootsHitCost != null ? LapisBootsHitCost.get() : 1; }
+    public static int getLapisBootsEnchantability() { return LapisBootsEnchantability != null ? LapisBootsEnchantability.get() : 60; }
+    public static double getLapisBootsToughness() { return LapisBootsToughness != null ? LapisBootsToughness.get() : 0.0; }
+    public static double getLapisBootsKnockBackResistance() { return LapisBootsKnockBackResistance != null ? LapisBootsKnockBackResistance.get() : 0.0; }
+    public static int getLapisBootsArmor() { return LapisBootsArmor != null ? LapisBootsArmor.get() : 3; }
+
+
+    // LavaCrystal Helmet Getters
+    public static int getLavaCrystalHelmetDurability() { return LavaCrystalHelmetDurability != null ? LavaCrystalHelmetDurability.get() : 1170; }
+    public static int getLavaCrystalHelmetHitCost() { return LavaCrystalHelmetHitCost != null ? LavaCrystalHelmetHitCost.get() : 1; }
+    public static int getLavaCrystalHelmetEnchantability() { return LavaCrystalHelmetEnchantability != null ? LavaCrystalHelmetEnchantability.get() : 60; }
+    public static double getLavaCrystalHelmetToughness() { return LavaCrystalHelmetToughness != null ? LavaCrystalHelmetToughness.get() : 0.0; }
+    public static double getLavaCrystalHelmetKnockBackResistance() { return LavaCrystalHelmetKnockBackResistance != null ? LavaCrystalHelmetKnockBackResistance.get() : 0.0; }
+    public static int getLavaCrystalHelmetArmor() { return LavaCrystalHelmetArmor != null ? LavaCrystalHelmetArmor.get() : 3; }
+
+
+    // LavaCrystal Chestplate Getters
+    public static int getLavaCrystalChestplateDurability() { return LavaCrystalChestplateDurability != null ? LavaCrystalChestplateDurability.get() : 1350; }
+    public static int getLavaCrystalChestplateHitCost() { return LavaCrystalChestplateHitCost != null ? LavaCrystalChestplateHitCost.get() : 1; }
+    public static int getLavaCrystalChestplateEnchantability() { return LavaCrystalChestplateEnchantability != null ? LavaCrystalChestplateEnchantability.get() : 60; }
+    public static double getLavaCrystalChestplateToughness() { return LavaCrystalChestplateToughness != null ? LavaCrystalChestplateToughness.get() : 0.0; }
+    public static double getLavaCrystalChestplateKnockBackResistance() { return LavaCrystalChestplateKnockBackResistance != null ? LavaCrystalChestplateKnockBackResistance.get() : 0.0; }
+    public static int getLavaCrystalChestplateArmor() { return LavaCrystalChestplateArmor != null ? LavaCrystalChestplateArmor.get() : 3; }
+
+
+    // LavaCrystal Leggings Getters
+    public static int getLavaCrystalLeggingsDurability() { return LavaCrystalLeggingsDurability != null ? LavaCrystalLeggingsDurability.get() : 1440; }
+    public static int getLavaCrystalLeggingsHitCost() { return LavaCrystalLeggingsHitCost != null ? LavaCrystalLeggingsHitCost.get() : 1; }
+    public static int getLavaCrystalLeggingsEnchantability() { return LavaCrystalLeggingsEnchantability != null ? LavaCrystalLeggingsEnchantability.get() : 60; }
+    public static double getLavaCrystalLeggingsToughness() { return LavaCrystalLeggingsToughness != null ? LavaCrystalLeggingsToughness.get() : 0.0; }
+    public static double getLavaCrystalLeggingsKnockBackResistance() { return LavaCrystalLeggingsKnockBackResistance != null ? LavaCrystalLeggingsKnockBackResistance.get() : 0.0; }
+    public static int getLavaCrystalLeggingsArmor() { return LavaCrystalLeggingsArmor != null ? LavaCrystalLeggingsArmor.get() : 3; }
+
+
+    // LavaCrystal Boots Getters
+    public static int getLavaCrystalBootsDurability() { return LavaCrystalBootsDurability != null ? LavaCrystalBootsDurability.get() : 990; }
+    public static int getLavaCrystalBootsHitCost() { return LavaCrystalBootsHitCost != null ? LavaCrystalBootsHitCost.get() : 1; }
+    public static int getLavaCrystalBootsEnchantability() { return LavaCrystalBootsEnchantability != null ? LavaCrystalBootsEnchantability.get() : 60; }
+    public static double getLavaCrystalBootsToughness() { return LavaCrystalBootsToughness != null ? LavaCrystalBootsToughness.get() : 0.0; }
+    public static double getLavaCrystalBootsKnockBackResistance() { return LavaCrystalBootsKnockBackResistance != null ? LavaCrystalBootsKnockBackResistance.get() : 0.0; }
+    public static int getLavaCrystalBootsArmor() { return LavaCrystalBootsArmor != null ? LavaCrystalBootsArmor.get() : 3; }
+
 
 
 }

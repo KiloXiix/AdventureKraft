@@ -196,6 +196,8 @@ public class ArmoredMobSpawnEvents {
 //                RegistryHandler.SAPPHIRE_SWORD.get(),
 //                RegistryHandler.QUEEN_GHIDORAH_SCALE_BATTLE_AXE.get(),
                 RegistryHandler.MANTIS_CLAW.get(),
+                RegistryHandler.KYANITE_SWORD.get(),
+                RegistryHandler.LAPIS_SWORD.get(),
 //                RegistryHandler.FIRE_CAKE_SWORD.get(),
 //                RegistryHandler.TITANIUM_CAKE_SWORD.get(),
 //                RegistryHandler.EXPERIENCE_SCYTHE.get(),
@@ -207,7 +209,8 @@ public class ArmoredMobSpawnEvents {
                 {RegistryHandler.COARSE_AMETHYST_HELMET.get(), RegistryHandler.COARSE_AMETHYST_CHESTPLATE.get(), RegistryHandler.COARSE_AMETHYST_LEGGINGS.get(), RegistryHandler.COARSE_AMETHYST_BOOTS.get()},
 //                {RegistryHandler.COPPER_HELMET.get(), RegistryHandler.COPPER_CHESTPLATE.get(), RegistryHandler.COPPER_LEGGINGS.get(), RegistryHandler.COPPER_BOOTS.get()},
 //                {RegistryHandler.EMERALD_HELMET.get(), RegistryHandler.EMERALD_CHESTPLATE.get(), RegistryHandler.EMERALD_LEGGINGS.get(), RegistryHandler.EMERALD_BOOTS.get()},
-//                {RegistryHandler.LAPIS_HELMET.get(), RegistryHandler.LAPIS_CHESTPLATE.get(), RegistryHandler.LAPIS_LEGGINGS.get(), RegistryHandler.LAPIS_BOOTS.get()},
+                {RegistryHandler.LAVA_CRYSTAL_HELMET.get(), RegistryHandler.LAVA_CRYSTAL_CHESTPLATE.get(), RegistryHandler.LAVA_CRYSTAL_LEGGINGS.get(), RegistryHandler.LAVA_CRYSTAL_BOOTS.get()},
+                {RegistryHandler.LAPIS_HELMET.get(), RegistryHandler.LAPIS_CHESTPLATE.get(), RegistryHandler.LAPIS_LEGGINGS.get(), RegistryHandler.LAPIS_BOOTS.get()},
 //                {RegistryHandler.SAPPHIRE_HELMET.get(), RegistryHandler.SAPPHIRE_CHESTPLATE.get(), RegistryHandler.SAPPHIRE_LEGGINGS.get(), RegistryHandler.SAPPHIRE_BOOTS.get()},
 //                {RegistryHandler.QUEEN_GHIDORAH_SCALE_HELMET.get(), RegistryHandler.QUEEN_GHIDORAH_SCALE_CHESTPLATE.get(), RegistryHandler.QUEEN_GHIDORAH_SCALE_LEGGINGS.get(), RegistryHandler.QUEEN_GHIDORAH_SCALE_BOOTS.get()},
 //                {RegistryHandler.TITANIUM_HELMET.get(), RegistryHandler.TITANIUM_CHESTPLATE.get(), RegistryHandler.TITANIUM_LEGGINGS.get(), RegistryHandler.TITANIUM_BOOTS.get()}

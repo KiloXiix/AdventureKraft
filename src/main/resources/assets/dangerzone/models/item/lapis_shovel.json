@@ -1,0 +1,8 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "dangerzone:item/tool/lapis_shovel"
+  }
+}
+
+
