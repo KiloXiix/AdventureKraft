@@ -120,6 +120,36 @@ public class DZConfig {
     private static ForgeConfigSpec.IntValue LavaCrystalBootsArmor;
 
 
+    // Lava Crystal Armor Attributes
+    private static ForgeConfigSpec.IntValue PinkHelmetDurability;
+    private static ForgeConfigSpec.IntValue PinkHelmetHitCost;
+    private static ForgeConfigSpec.IntValue PinkHelmetEnchantability;
+    private static ForgeConfigSpec.IntValue PinkHelmetToughness;
+    private static ForgeConfigSpec.IntValue PinkHelmetKnockBackResistance;
+    private static ForgeConfigSpec.IntValue PinkHelmetArmor;
+
+    private static ForgeConfigSpec.IntValue PinkChestplateDurability;
+    private static ForgeConfigSpec.IntValue PinkChestplateHitCost;
+    private static ForgeConfigSpec.IntValue PinkChestplateEnchantability;
+    private static ForgeConfigSpec.IntValue PinkChestplateToughness;
+    private static ForgeConfigSpec.IntValue PinkChestplateKnockBackResistance;
+    private static ForgeConfigSpec.IntValue PinkChestplateArmor;
+
+    private static ForgeConfigSpec.IntValue PinkLeggingsDurability;
+    private static ForgeConfigSpec.IntValue PinkLeggingsHitCost;
+    private static ForgeConfigSpec.IntValue PinkLeggingsEnchantability;
+    private static ForgeConfigSpec.IntValue PinkLeggingsToughness;
+    private static ForgeConfigSpec.IntValue PinkLeggingsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue PinkLeggingsArmor;
+
+    private static ForgeConfigSpec.IntValue PinkBootsDurability;
+    private static ForgeConfigSpec.IntValue PinkBootsHitCost;
+    private static ForgeConfigSpec.IntValue PinkBootsEnchantability;
+    private static ForgeConfigSpec.IntValue PinkBootsToughness;
+    private static ForgeConfigSpec.IntValue PinkBootsKnockBackResistance;
+    private static ForgeConfigSpec.IntValue PinkBootsArmor;
+
+
 
 
 
@@ -536,6 +566,32 @@ public class DZConfig {
         LavaCrystalBootsKnockBackResistance = builder.comment("Lava Crystal Boots Knockback Resistance").defineInRange("Lava CrystalBootsKnockBackResistance", 0, 0, 1000);
 
 
+        // Pink Armor Set
+        PinkHelmetDurability = builder.comment("Pink Helmet Durability").defineInRange("PinkHelmetDurability", 1170, 0, 10000);
+        PinkHelmetHitCost = builder.comment("How much durability the Pink Helmet loses when an entity hit").defineInRange("PinkHelmetHitCost", 1, 0, 10000);
+        PinkHelmetArmor = builder.comment("How much armor the Pink Helmet has").defineInRange("PinkHelmetArmor", 3, 0, 1000);
+        PinkHelmetEnchantability = builder.comment("Pink Helmet Enchantability").defineInRange("PinkHelmetEnchantability", 60, 0, 1000);
+        PinkHelmetToughness = builder.comment("Pink Helmet Toughness").defineInRange("PinkHelmetToughness", 0, 0, 1000);
+        PinkHelmetKnockBackResistance = builder.comment("Pink Helmet Knockback Resistance").defineInRange("PinkHelmetKnockBackResistance", 0, 0, 1000);
+        PinkChestplateDurability = builder.comment("Pink Chestplate Durability").defineInRange("PinkChestplateDurability", 1350, 0, 10000);
+        PinkChestplateHitCost = builder.comment("How much durability the Pink chestplate loses when an entity is hit").defineInRange("PinkChestplateHitCost", 1, 0, 10000);
+        PinkChestplateArmor = builder.comment("How much armor the Pink Chestplate has").defineInRange("PinkChestplateArmor", 3, 0, 1000);
+        PinkChestplateEnchantability = builder.comment("Pink Chestplate Enchantability").defineInRange("PinkChestplateEnchantability", 60, 0, 1000);
+        PinkChestplateToughness = builder.comment("Pink Chestplate Toughness").defineInRange("PinkChestplateToughness", 0, 0, 1000);
+        PinkChestplateKnockBackResistance = builder.comment("Pink Chestplate Knockback Resistance").defineInRange("PinkChestplateKnockBackResistance", 0, 0, 1000);
+        PinkLeggingsDurability = builder.comment("Pink Leggings Durability").defineInRange("PinkLeggingsDurability", 1440, 100, 10000);
+        PinkLeggingsHitCost = builder.comment("How much durability the Pink leggings loses when an entity is hit").defineInRange("PinkLeggingsHitCost", 1, 0, 10000);
+        PinkLeggingsArmor = builder.comment("How much armor the Pink Leggings has").defineInRange("PinkLeggingsArmor", 3, 0, 1000);
+        PinkLeggingsEnchantability = builder.comment("Pink Leggings Enchantability").defineInRange("PinkLeggingsEnchantability", 60, 0, 1000);
+        PinkLeggingsToughness = builder.comment("Pink Leggings Toughness").defineInRange("PinkLeggingsToughness", 0, 0, 1000);
+        PinkLeggingsKnockBackResistance = builder.comment("Pink Leggings Knockback Resistance").defineInRange("PinkLeggingsKnockBackResistance", 0, 0, 1000);
+        PinkBootsDurability = builder.comment("Pink Boots Durability").defineInRange("PinkBootsDurability", 990, 0, 10000);
+        PinkBootsHitCost = builder.comment("How much durability the Pink boots lose when an entity hits").defineInRange("PinkBootsHitCost", 1, 0, 10000);
+        PinkBootsArmor = builder.comment("How much armor the Pink Boots has").defineInRange("PinkBootsArmor", 3, 0, 1000);
+        PinkBootsEnchantability = builder.comment("Pink Boots Enchantability").defineInRange("PinkBootsEnchantability", 60, 0, 1000);
+        PinkBootsToughness = builder.comment("Pink Boots Toughness").defineInRange("PinkBootsToughness", 0, 0, 1000);
+        PinkBootsKnockBackResistance = builder.comment("Pink Boots Knockback Resistance").defineInRange("PinkBootsKnockBackResistance", 0, 0, 1000);
+
 
 
     }
@@ -763,6 +819,41 @@ public class DZConfig {
     public static double getLavaCrystalBootsKnockBackResistance() { return LavaCrystalBootsKnockBackResistance != null ? LavaCrystalBootsKnockBackResistance.get() : 0.0; }
     public static int getLavaCrystalBootsArmor() { return LavaCrystalBootsArmor != null ? LavaCrystalBootsArmor.get() : 3; }
 
+
+    // Pink Helmet Getters
+    public static int getPinkHelmetDurability() { return PinkHelmetDurability != null ? PinkHelmetDurability.get() : 1170; }
+    public static int getPinkHelmetHitCost() { return PinkHelmetHitCost != null ? PinkHelmetHitCost.get() : 1; }
+    public static int getPinkHelmetEnchantability() { return PinkHelmetEnchantability != null ? PinkHelmetEnchantability.get() : 60; }
+    public static double getPinkHelmetToughness() { return PinkHelmetToughness != null ? PinkHelmetToughness.get() : 0.0; }
+    public static double getPinkHelmetKnockBackResistance() { return PinkHelmetKnockBackResistance != null ? PinkHelmetKnockBackResistance.get() : 0.0; }
+    public static int getPinkHelmetArmor() { return PinkHelmetArmor != null ? PinkHelmetArmor.get() : 3; }
+
+
+    // Pink Chestplate Getters
+    public static int getPinkChestplateDurability() { return PinkChestplateDurability != null ? PinkChestplateDurability.get() : 1350; }
+    public static int getPinkChestplateHitCost() { return PinkChestplateHitCost != null ? PinkChestplateHitCost.get() : 1; }
+    public static int getPinkChestplateEnchantability() { return PinkChestplateEnchantability != null ? PinkChestplateEnchantability.get() : 60; }
+    public static double getPinkChestplateToughness() { return PinkChestplateToughness != null ? PinkChestplateToughness.get() : 0.0; }
+    public static double getPinkChestplateKnockBackResistance() { return PinkChestplateKnockBackResistance != null ? PinkChestplateKnockBackResistance.get() : 0.0; }
+    public static int getPinkChestplateArmor() { return PinkChestplateArmor != null ? PinkChestplateArmor.get() : 3; }
+
+
+    // Pink Leggings Getters
+    public static int getPinkLeggingsDurability() { return PinkLeggingsDurability != null ? PinkLeggingsDurability.get() : 1440; }
+    public static int getPinkLeggingsHitCost() { return PinkLeggingsHitCost != null ? PinkLeggingsHitCost.get() : 1; }
+    public static int getPinkLeggingsEnchantability() { return PinkLeggingsEnchantability != null ? PinkLeggingsEnchantability.get() : 60; }
+    public static double getPinkLeggingsToughness() { return PinkLeggingsToughness != null ? PinkLeggingsToughness.get() : 0.0; }
+    public static double getPinkLeggingsKnockBackResistance() { return PinkLeggingsKnockBackResistance != null ? PinkLeggingsKnockBackResistance.get() : 0.0; }
+    public static int getPinkLeggingsArmor() { return PinkLeggingsArmor != null ? PinkLeggingsArmor.get() : 3; }
+
+
+    // Pink Boots Getters
+    public static int getPinkBootsDurability() { return PinkBootsDurability != null ? PinkBootsDurability.get() : 990; }
+    public static int getPinkBootsHitCost() { return PinkBootsHitCost != null ? PinkBootsHitCost.get() : 1; }
+    public static int getPinkBootsEnchantability() { return PinkBootsEnchantability != null ? PinkBootsEnchantability.get() : 60; }
+    public static double getPinkBootsToughness() { return PinkBootsToughness != null ? PinkBootsToughness.get() : 0.0; }
+    public static double getPinkBootsKnockBackResistance() { return PinkBootsKnockBackResistance != null ? PinkBootsKnockBackResistance.get() : 0.0; }
+    public static int getPinkBootsArmor() { return PinkBootsArmor != null ? PinkBootsArmor.get() : 3; }
 
 
 }

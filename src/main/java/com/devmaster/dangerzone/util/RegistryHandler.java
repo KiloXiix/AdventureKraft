@@ -1,5 +1,6 @@
 package com.devmaster.dangerzone.util;
 
+import com.devmaster.dangerzone.blocks.ABlock;
 import com.devmaster.dangerzone.configs.DZConfig;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.misc.DangerZone;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,6 +30,11 @@ public class RegistryHandler {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DangerZone.MOD_ID);
 
+    // === Blocks ===
+    public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", () -> new ABlock("ruby_block", Block.Properties.of().strength(3.0F, 3.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(), 0).addInfo("§cTemp Tooltip For Now§c"));
+
+
+
     // === Regular Items ===
     public static final RegistryObject<Item> BIORAPTOR_SCALE = ITEMS.register("bioraptor_scale", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now");}});
     public static final RegistryObject<Item> BASILISK_SCALE = ITEMS.register("basilisk_scale", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("\u00A72This is your badge of honor.\u00A72");}});
@@ -39,7 +46,16 @@ public class RegistryHandler {
     public static final RegistryObject<Item> GREEN_GOO = ITEMS.register("green_goo", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
     public static final RegistryObject<Item> KATTERKILLER_JAW = ITEMS.register("katterkiller_jaw", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
     public static final RegistryObject<Item> KRAKEN_TOOTH = ITEMS.register("kraken_tooth", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> BLANK_DISC = ITEMS.register("blank_disc", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> NESSIE_SCALE = ITEMS.register("nessie_scale", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> MOTHRA_SCALE = ITEMS.register("mothra_scale", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> PINK_CRYSTAL = ITEMS.register("pink_crystal", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> RED_HEEL = ITEMS.register("red_heel", () -> new AItem(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON)) {{addInfo("Temp Tooltip For Now.");}});
+    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(RUBY_BLOCK.get(), new Item.Properties()));
 
+    // === Special Items ===
+    public static final RegistryObject<Item> MINERS_DREAM = ITEMS.register("miners_dream", MinersDreamItem::new);
 
 
     // === Weapon Items ===
@@ -79,6 +95,16 @@ public class RegistryHandler {
     public static final RegistryObject<ArmorItem> LAVA_CRYSTAL_LEGGINGS = ITEMS.register("lava_crystal_leggings", () -> new Armour(() -> createLavaCrystalArmorTier(ArmorItem.Type.LEGGINGS), ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getLavaCrystalLeggingsHitCost(), ""));
     public static final RegistryObject<ArmorItem> LAVA_CRYSTAL_BOOTS = ITEMS.register("lava_crystal_boots", () -> new Armour(() -> createLavaCrystalArmorTier(ArmorItem.Type.BOOTS), ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getLavaCrystalBootsHitCost(), ""));
     private static ArmourTier createLavaCrystalArmorTier(ArmorItem.Type type) {return new ArmourTier("lava_crystal", () -> getLavaCrystalDurabilityForType(type), () -> getLavaCrystalArmorForType(type), () -> getLavaCrystalEnchantabilityForType(type), () -> getLavaCrystalToughnessForType(type), () -> getLavaCrystalKnockbackResistanceForType(type), true, () -> Ingredient.of(LAVA_CRYSTAL.get()));}private static int getLavaCrystalDurabilityForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getLavaCrystalHelmetDurability();case CHESTPLATE -> DZConfig.getLavaCrystalChestplateDurability();case LEGGINGS -> DZConfig.getLavaCrystalLeggingsDurability();case BOOTS -> DZConfig.getLavaCrystalBootsDurability();};}private static int getLavaCrystalArmorForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getLavaCrystalHelmetArmor();case CHESTPLATE -> DZConfig.getLavaCrystalChestplateArmor();case LEGGINGS -> DZConfig.getLavaCrystalLeggingsArmor();case BOOTS -> DZConfig.getLavaCrystalBootsArmor();};}private static int getLavaCrystalEnchantabilityForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getLavaCrystalHelmetEnchantability();case CHESTPLATE -> DZConfig.getLavaCrystalChestplateEnchantability();case LEGGINGS -> DZConfig.getLavaCrystalLeggingsEnchantability();case BOOTS -> DZConfig.getLavaCrystalBootsEnchantability();};}private static float getLavaCrystalToughnessForType(ArmorItem.Type type) {return (float) switch (type) {case HELMET -> DZConfig.getLavaCrystalHelmetToughness();case CHESTPLATE -> DZConfig.getLavaCrystalChestplateToughness();case LEGGINGS -> DZConfig.getLavaCrystalLeggingsToughness();case BOOTS -> DZConfig.getLavaCrystalBootsToughness();};}private static float getLavaCrystalKnockbackResistanceForType(ArmorItem.Type type) {return (float) switch (type) {case HELMET -> DZConfig.getLavaCrystalHelmetKnockBackResistance();case CHESTPLATE -> DZConfig.getLavaCrystalChestplateKnockBackResistance();case LEGGINGS -> DZConfig.getLavaCrystalLeggingsKnockBackResistance();case BOOTS -> DZConfig.getLavaCrystalBootsKnockBackResistance();};}
+
+
+    public static final RegistryObject<ArmorItem> PINK_HELMET = ITEMS.register("pink_helmet", () -> new Armour(() -> createPinkArmorTier(ArmorItem.Type.HELMET), ArmorItem.Type.HELMET, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getPinkHelmetHitCost(), ""));
+    public static final RegistryObject<ArmorItem> PINK_CHESTPLATE = ITEMS.register("pink_chestplate", () -> new Armour(() -> createPinkArmorTier(ArmorItem.Type.CHESTPLATE), ArmorItem.Type.CHESTPLATE, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getPinkChestplateHitCost(), ""));
+    public static final RegistryObject<ArmorItem> PINK_LEGGINGS = ITEMS.register("pink_leggings", () -> new Armour(() -> createPinkArmorTier(ArmorItem.Type.LEGGINGS), ArmorItem.Type.LEGGINGS, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getPinkLeggingsHitCost(), ""));
+    public static final RegistryObject<ArmorItem> PINK_BOOTS = ITEMS.register("pink_boots", () -> new Armour(() -> createPinkArmorTier(ArmorItem.Type.BOOTS), ArmorItem.Type.BOOTS, new Item.Properties().rarity(Rarity.COMMON), () -> DZConfig.getPinkBootsHitCost(), ""));
+    private static ArmourTier createPinkArmorTier(ArmorItem.Type type) {return new ArmourTier("pink", () -> getPinkDurabilityForType(type), () -> getPinkArmorForType(type), () -> getPinkEnchantabilityForType(type), () -> getPinkToughnessForType(type), () -> getPinkKnockbackResistanceForType(type), true, () -> Ingredient.of(PINK_CRYSTAL.get()));}private static int getPinkDurabilityForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getPinkHelmetDurability();case CHESTPLATE -> DZConfig.getPinkChestplateDurability();case LEGGINGS -> DZConfig.getPinkLeggingsDurability();case BOOTS -> DZConfig.getPinkBootsDurability();};}private static int getPinkArmorForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getPinkHelmetArmor();case CHESTPLATE -> DZConfig.getPinkChestplateArmor();case LEGGINGS -> DZConfig.getPinkLeggingsArmor();case BOOTS -> DZConfig.getPinkBootsArmor();};}private static int getPinkEnchantabilityForType(ArmorItem.Type type) {return switch (type) {case HELMET -> DZConfig.getPinkHelmetEnchantability();case CHESTPLATE -> DZConfig.getPinkChestplateEnchantability();case LEGGINGS -> DZConfig.getPinkLeggingsEnchantability();case BOOTS -> DZConfig.getPinkBootsEnchantability();};}private static float getPinkToughnessForType(ArmorItem.Type type) {return (float) switch (type) {case HELMET -> DZConfig.getPinkHelmetToughness();case CHESTPLATE -> DZConfig.getPinkChestplateToughness();case LEGGINGS -> DZConfig.getPinkLeggingsToughness();case BOOTS -> DZConfig.getPinkBootsToughness();};}private static float getPinkKnockbackResistanceForType(ArmorItem.Type type) {return (float) switch (type) {case HELMET -> DZConfig.getPinkHelmetKnockBackResistance();case CHESTPLATE -> DZConfig.getPinkChestplateKnockBackResistance();case LEGGINGS -> DZConfig.getPinkLeggingsKnockBackResistance();case BOOTS -> DZConfig.getPinkBootsKnockBackResistance();};}
+
+
+
 
 
 
@@ -126,6 +152,7 @@ public class RegistryHandler {
                 .displayItems((params, output) -> {
                     output.accept(BASILISK_SCALE.get());
                     output.accept(BIORAPTOR_SCALE.get());
+                    output.accept(BLANK_DISC.get());
                     output.accept(COARSE_AMETHYST.get());
                     output.accept(EMPEROR_SCORPION_SCALE.get());
                     output.accept(GIANT_MOLE_NOSE.get());
@@ -133,6 +160,12 @@ public class RegistryHandler {
                     output.accept(KATTERKILLER_JAW.get());
                     output.accept(KRAKEN_TOOTH.get());
                     output.accept(LAVA_CRYSTAL.get());
+                    output.accept(MINERS_DREAM.get());
+                    output.accept(MOTHRA_SCALE.get());
+                    output.accept(NESSIE_SCALE.get());
+                    output.accept(PINK_CRYSTAL.get());
+                    output.accept(RED_HEEL.get());
+                    output.accept(RUBY.get());
                     output.accept(WATER_DRAGON_SCALE.get());
                 })
                 .withBackgroundLocation(new ResourceLocation("dangerzone", "textures/gui/inventory_tab.png"))
@@ -161,6 +194,11 @@ public class RegistryHandler {
                     output.accept(LAVA_CRYSTAL_CHESTPLATE.get());
                     output.accept(LAVA_CRYSTAL_LEGGINGS.get());
                     output.accept(LAVA_CRYSTAL_BOOTS.get());
+
+                    output.accept(PINK_HELMET.get());
+                    output.accept(PINK_CHESTPLATE.get());
+                    output.accept(PINK_LEGGINGS.get());
+                    output.accept(PINK_BOOTS.get());
 
                 })
                 .withBackgroundLocation(new ResourceLocation("dangerzone", "textures/gui/inventory_tab.png"))
@@ -220,10 +258,10 @@ public class RegistryHandler {
         return CreativeModeTab.builder()
                 .title(Component.translatable("itemGroup.eadventurekrafteblockstab"))
                 // .icon(() -> new ItemStack(COARSE_AMETHYST_CHESTPLATE.get()))
-                .icon(() -> new ItemStack(Items.STONE)) // Temp icon for blocks tab
+                .icon(() -> new ItemStack(RUBY_BLOCK_ITEM.get()))
                 .displayItems((params, output) -> {
                     //Blocks Go Here
-                    output.accept(Items.COBBLESTONE); // Temp item to prevent empty tab
+                    output.accept(RUBY_BLOCK_ITEM.get());
                 })
                 .withBackgroundLocation(new ResourceLocation("dangerzone", "textures/gui/inventory_tab.png"))
                 .withTabsImage(new ResourceLocation("dangerzone", "textures/gui/tab_icons.png"))

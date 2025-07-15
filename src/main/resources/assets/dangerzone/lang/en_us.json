@@ -1,4 +1,5 @@
 {
+  "_comment": "Items",
   "item.dangerzone.basilisk_scale": "Basilisk Scale",
   "item.dangerzone.bioraptor_scale": "Bioraptor Scale",
   "item.dangerzone.water_dragon_scale": "Water Dragon Scale",
@@ -9,7 +10,19 @@
   "item.dangerzone.green_goo": "Green Goo",
   "item.dangerzone.katterkiller_jaw": "Katerkiller Jaw",
   "item.dangerzone.kraken_tooth": "Kraken Tooth",
+  "item.dangerzone.blank_disc": "Blank Disc",
+  "item.dangerzone.nessie_scale": "Nessie Scale",
+  "item.dangerzone.mothra_scale": "Mothra Scale",
+  "item.dangerzone.pink_crystal": "Pink Crystal",
+  "item.dangerzone.ruby": "Ruby",
+  "item.dangerzone.red_heel": "Red Heel",
 
+
+  "_comment": "Special Items",
+  "item.dangerzone.miners_dream": "Miner's Dream",
+
+
+  "_comment": "Armor Sets",
   "item.dangerzone.coarse_amethyst_chestplate": "Coarse Amethyst Chestplate",
   "item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
   "item.dangerzone.coarse_amethyst_helmet": "Coarse Amethyst Helmet",
@@ -22,11 +35,19 @@
   "item.dangerzone.lava_crystal_chestplate": "Lava Crystal Chestplate",
   "item.dangerzone.lava_crystal_leggings": "Lava Crystal Leggings",
   "item.dangerzone.lava_crystal_boots": "Lava Crystal Boots",
+  "item.dangerzone.pink_helmet": "Pink Helmet",
+  "item.dangerzone.pink_chestplate": "Pink Chestplate",
+  "item.dangerzone.pink_leggings": "Pink Leggings",
+  "item.dangerzone.pink_boots": "Pink Boots",
 
+
+  "_comment": "Weapons",
   "item.dangerzone.mantis_claw": "Mantis Claw",
   "item.dangerzone.kyanite_sword": "Kyanite Sword",
   "item.dangerzone.lapis_sword": "Lapis Sword",
 
+
+  "_comment": "Tools",
   "item.dangerzone.kyanite_pickaxe": "Kyanite Pickaxe",
   "item.dangerzone.kyanite_axe": "Kyanite Axe",
   "item.dangerzone.kyanite_shovel": "Kyanite Shovel",
@@ -36,6 +57,13 @@
   "item.dangerzone.lapis_shovel": "Lapis Shovel",
   "item.dangerzone.lapis_hoe": "Lapis Hoe",
 
+
+  "_comment": "Blocks",
+  "block.dangerzone.ruby_block": "Ruby Block",
+
+
+
+  "_comment": "Creative Tabs",
   "itemGroup.aadventurekraftaitemstab": "§fAdventureKraft Items§f",
   "itemGroup.badventurekraftbarmorytab": "§fAdventureKraft Armory§f",
   "itemGroup.cadventurekraftcweaponrytab": "§fAdventureKraft Weaponry§f",

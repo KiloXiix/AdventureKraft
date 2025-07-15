@@ -9,12 +9,16 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
-
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 
 @Mod(DangerZone.MOD_ID)
 public class DangerZone {
     public static final String MOD_ID = "dangerzone";
     public static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(MOD_ID);
+    public static final TagKey<Block> MINERS_DREAM_MINEABLE = TagKey.create(Registries.BLOCK, new ResourceLocation(DangerZone.MOD_ID, "miners_dream_breakable"));
 
     public DangerZone() {
         // Register config FIRST
@@ -35,5 +39,6 @@ public class DangerZone {
 
     private void onCommonSetup(FMLCommonSetupEvent event) {
         // Common Setup Code can go here
+
     }
 }
