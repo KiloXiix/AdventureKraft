@@ -57,10 +57,10 @@ public class MinersDreamItem extends Item {
                             }
                         }
 
-                        // Add ceiling protection
+
                         BlockPos topPos = newPos.above();
                         BlockState topState = level.getBlockState(topPos);
-                        if (topState.is(Blocks.AIR) || topState.is(Blocks.WATER) || topState.is(Blocks.LAVA)) {
+                        if (topPos.getY() <= 14 && (topState.is(Blocks.AIR) || topState.is(Blocks.WATER) || topState.is(Blocks.LAVA))) {
                             level.setBlock(topPos, Blocks.COBBLESTONE.defaultBlockState(), 3);
                         }
                     }

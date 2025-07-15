@@ -156,8 +156,10 @@ public class ArmoredMobSpawnEvents {
                 Enchantments.MENDING,
                 Enchantments.PROJECTILE_PROTECTION,
                 Enchantments.THORNS,
-                Enchantments.UNBREAKING
+                Enchantments.UNBREAKING,
+                Enchantments.SWIFT_SNEAK
         };
+
 
         bootEnchant = new Enchantment[]{
                 Enchantments.BLAST_PROTECTION,
