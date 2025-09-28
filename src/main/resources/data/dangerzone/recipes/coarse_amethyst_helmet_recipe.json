@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "dangerzone:coarse_amethyst"
+    }
+  },
+  "result": {
+    "item": "dangerzone:coarse_amethyst_helmet",
+    "count": 1
+  }
+}
