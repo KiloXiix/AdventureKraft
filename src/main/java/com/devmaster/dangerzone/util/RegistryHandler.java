@@ -2,20 +2,31 @@ package com.devmaster.dangerzone.util;
 
 import com.devmaster.dangerzone.blocks.ABlock;
 import com.devmaster.dangerzone.configs.DZConfig;
+import com.devmaster.dangerzone.entities.*;
+import com.devmaster.dangerzone.client.model.*;
+import com.devmaster.dangerzone.client.renderer.*;
 import com.devmaster.dangerzone.items.*;
 import com.devmaster.dangerzone.misc.DangerZone;
 import net.minecraft.core.registries.Registries;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.common.ForgeSpawnEggItem;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -23,12 +34,67 @@ import net.minecraftforge.registries.RegistryObject;
 import javax.annotation.Nonnull;
 import java.util.List;
 
+@Mod.EventBusSubscriber(modid = DangerZone.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class RegistryHandler {
 
     // === Deferred Registers ===
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DangerZone.MOD_ID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DangerZone.MOD_ID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DangerZone.MOD_ID);
+    public static final DeferredRegister<EntityType<?>> MOBS = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, DangerZone.MOD_ID);
+
+
+    // === Mobs ===
+    public static final RegistryObject<EntityType<KrakenEntity>> KRAKEN = MOBS.register("kraken",
+            () -> EntityType.Builder.<KrakenEntity>of(KrakenEntity::new, MobCategory.MONSTER)
+                    .setShouldReceiveVelocityUpdates(true)
+                    .setTrackingRange(64)
+                    .setUpdateInterval(3)
+                    .sized(3f, 15f)
+                    .build("kraken"));
+
+
+    // === Mob Inits Used When Defining Spawn Placements ===
+    @SubscribeEvent
+    public static void init(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            KrakenEntity.init();
+        });
+    }
+
+
+    // === Mob Attribute Creation ===
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(KRAKEN.get(), KrakenEntity.createAttributes().build());
+    }
+
+
+    // === Mob Renderers ===
+    @SubscribeEvent
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+
+        event.registerEntityRenderer(RegistryHandler.KRAKEN.get(),
+                KrakenRenderer::new);
+    }
+
+
+    // === Mob Layer Definitions ===
+    @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(KrakenModel.LAYER_LOCATION, KrakenModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(RegistryHandler.KRAKEN.get(), KrakenRenderer::new);
+    }
+
+
+    // === Spawn Egg Items
+    public static final RegistryObject<Item> KRAKEN_SPAWN_EGG = ITEMS.register("kraken_spawn_egg", () -> new ForgeSpawnEggItem(RegistryHandler.KRAKEN, -1, -1, new Item.Properties()));
+
+
 
     // === Blocks ===
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block", () -> new ABlock("ruby_block", Block.Properties.of().strength(3.0F, 3.0F).sound(SoundType.METAL).requiresCorrectToolForDrops(), 0).addInfo("§cTemp Tooltip For Now§c"));
@@ -140,6 +206,7 @@ public class RegistryHandler {
         ITEMS.register(modEventBus);
         BLOCKS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        MOBS.register(modEventBus);
     }
 
 
@@ -159,6 +226,7 @@ public class RegistryHandler {
                     output.accept(GREEN_GOO.get());
                     output.accept(KATTERKILLER_JAW.get());
                     output.accept(KRAKEN_TOOTH.get());
+                    output.accept(KRAKEN_SPAWN_EGG.get());
                     output.accept(LAVA_CRYSTAL.get());
                     output.accept(MINERS_DREAM.get());
                     output.accept(MOTHRA_SCALE.get());
@@ -215,10 +283,6 @@ public class RegistryHandler {
                  .icon(() -> new ItemStack(KYANITE_SWORD.get()))
                 .displayItems((params, output) -> {
                     //Weapons Go Here
-//                    output.accept(MANTIS_CLAW.get()); // Placeholder until items are added
-//                    output.accept(MANTIS_CLAW.get()); // Placeholder until items are added
-//                    output.accept(MANTIS_CLAW.get()); // Placeholder until items are added
-//                    output.accept(MANTIS_CLAW.get()); // Placeholder until items are added
                     output.accept(KYANITE_SWORD.get());
                     output.accept(LAPIS_SWORD.get());
                     output.accept(MANTIS_CLAW.get()); // Temp item to prevent empty tab

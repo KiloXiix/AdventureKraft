@@ -22,6 +22,15 @@
   "item.dangerzone.miners_dream": "Miner's Dream",
 
 
+  "_comment": "Mobs",
+  "entities.dangerzone.alien": "kraken",
+
+
+  "_comment": "Mob Spawn Eggs",
+  "item.dangerzone.kraken_spawn_egg": "Kraken Spawn Egg",
+
+
+
   "_comment": "Armor Sets",
   "item.dangerzone.coarse_amethyst_chestplate": "Coarse Amethyst Chestplate",
   "item.dangerzone.coarse_amethyst_leggings": "Coarse Amethyst Leggings",
